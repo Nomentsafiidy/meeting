@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { MeetingComponent } from './meeting.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
     {
@@ -14,6 +15,6 @@ const routes: Routes = [
 
 @NgModule({
     declarations: [MeetingComponent],
-    imports: [CommonModule, RouterModule.forChild(routes)],
+    imports: [CommonModule, FormsModule, RouterModule.forChild(routes)],
 })
 export class MeetingComponentModule {}

@@ -1,11 +1,18 @@
 <div>
     <button (click)="startMeeting()">Start</button>
+    <button (click)="stopMeeting()">Stop</button>
+    <button (click)="joinMeeting()">joinMeeting</button>
     <div class="meeting-container">
         <div class="meeting-item">
-            <audio></audio>
+            <audio controls id="receiver-audio"></audio>
+            <textarea [(ngModel)]="emiterOffer" name="" id="" cols="30" rows="10"></textarea>
         </div>
         <div class="meeting-item">
-            <audio></audio>
+            <audio controls id="emiter-audio"></audio>
+            <form (submit)="joinMeeting()">
+                <textarea name="aze" [(ngModel)]="receiverOffer" cols="30" rows="10"></textarea>
+                <button type="submit">send</button>
+            </form>
         </div>
     </div>
 </div>
